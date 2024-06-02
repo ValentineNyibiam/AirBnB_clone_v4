@@ -42,16 +42,21 @@ button:hover {
     font-size: 14px;
 }
 .locations {
+    position: relative;
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
 }
 .amenities {
     height: 100%;
-    width: 25%;
+    width: 50%;
+    position: relative;
 }
 
 .popover {
+    position: absolute;
+    top: 70px;
+    left:0;
     visibility: hidden;
     width: 100%;
     border: 1px solid #DDDDDD;
@@ -68,10 +73,16 @@ button:hover {
     width: 0px;
 }
 
+.amenities h4{
+    margin-block: 0px !important;
+    overflow: hidden;
+}
+
 .amenities .popover {
     padding: 10px 0;
     margin-left: -5px;
     margin-top: 0%;
+    width: 50% !important;
 }
 
 .amenities .popover ul{
