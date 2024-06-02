@@ -7,7 +7,7 @@ from models.user import User
 from models.amenity import Amenity
 from models import storage
 from api.v1.views import app_views
-from flask import abort, jsonify, make_response, request
+from flask import abort, json, Response, request
 from flasgger.utils import swag_from
 
 
@@ -24,8 +24,8 @@ def get_places(city_id):
         abort(404)
 
     places = [place.to_dict() for place in city.places]
-
-    return jsonify(places)
+    res = json.dumps(places, indent=2) + '\n'
+    return Response(res, mimetype="application/json")
 
 
 @app_views.route('/places/<place_id>', methods=['GET'], strict_slashes=False)
