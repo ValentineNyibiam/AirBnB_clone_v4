@@ -25,7 +25,7 @@ $("document").ready(() => {
 
     // Update server status
     const apiBadge = $("#api_status")
-    url = "http://0.0.0.0:5001/api/v1/status/";
+    url = "http://100.25.200.149/2-hbnb";
     $.get(url, (res, xhr_obj, stat) => {
 	apiBadge.addClass("available");
     }).fail(err => {
