@@ -1,7 +1,0 @@
-#!/usr/bin/node
-
-let mydic = {};
-mydict.name = "name";
-mydict.age = "age";
-
-console.log(mydic);
